@@ -10,6 +10,7 @@ body
     background: lightgray;
     font-family: Roboto,Arial,sans-serif;
     letter-spacing: 0;
+    overflow-x: hidden;
 }
 #header {
     background: #2874f0;
@@ -35,7 +36,7 @@ body
     flex-direction: column;
     position: relative;
     top: 5px;
-    left: 40px;
+    left: 30px;
 }
 .searchblock
 {
@@ -307,7 +308,7 @@ ul.dropdown2 li a{
 /*-----------Middle menu CSS Starts Here---------*/
 #menumiddle
 {
-    width: 130%;
+    width: 100%;
     background-color: white;
     height: 50px;
     border-bottom: 1px solid #ccc;
@@ -315,8 +316,9 @@ ul.dropdown2 li a{
 
 #menumiddle nav
 {
-    width: 90%;
+    
     margin: 0 auto;
+    margin-left:6.5%;
     height: 50px;
     display: flex;
     align-items: center;
@@ -360,6 +362,9 @@ ul.dropdown2 li a{
     top: 33px;
     text-align: left;
     display: none;
+}
+.offerblockMobile{
+    /*display:none;*/
 }
 .megamenu div 
 {
@@ -467,7 +472,7 @@ ul.dropdown2 li a{
 /* section2*/
 .item {
     height: 300px;
-    width: 3500px;
+    width:33%;
     margin: 5px;
    color:rgb(0, 166, 243);
     background-color: #FCF2EC;
@@ -480,4 +485,172 @@ ul.dropdown2 li a{
     height: 100%;
     justify-content: center;
     align-items: center;
+  }
+  .offerblockMobile, .searchblock-mobile form{
+      display: none;
+  }
+  .item-mobile{
+      display: none;
+  }
+
+  @media (min-width:320px) and (max-width:480px){
+    .cart{
+        display: none;
+    }  
+    .rightblock ul li :nth-child(1),.rightblock ul li :nth-child(2){
+        display: none;
+    }  
+    ul li:nth-child(5),ul li:nth-child(6),ul li:nth-child(7),ul li:nth-child(8),ul li:nth-child(9),ul li:nth-child(10){
+        display: none;
+    }
+    /*.item :nth-child(2),.item :nth-child(1){
+        display: none;
+    }*/
+    .item{
+        display: none;
+    }
+    .item-mobile{
+        display: block;
+    }
+    .item-mobile {
+        height: 300px;
+        
+        margin: 5px;
+       color:rgb(0, 166, 243);
+        background-color: #FCF2EC;
+      }
+      /*--- form start ---*/
+      .searchblock{
+          display: none;
+      }
+      .searchblock-mobile form {
+        display: flex;
+    }
+    .searchblock-mobile form input[type="search"]
+    {
+        width: 100%;
+        height: 35px;
+        padding: 0 0px 0 15px;
+        border-radius: 0px;
+        border:none;
+        margin: 0;
+    }
+    ::placeholder
+    {
+        font-size: 13px;
+        text-align: justify;
+    }
+    .searchicon{
+        position: relative;
+    }
+    .searchblock i{
+        color: #2874f0;
+        font-size: 20px;
+        font-weight: 600;
+        position: absolute;
+        top: 12px;
+        left: -35px;
+    }
+      /*--- form end ---*/
+      body{
+          overflow-x: hidden;
+      }
+
+    .logoblock{
+        left:6%;
+    }
+    #header article,.leftblock{
+        width:100%;
+    }
+    .more{
+          display: none;
+      }
+    .offerblockMobile{
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        height: 200px;
+        align-items: center;
+        font-weight: bold;
+        text-align: center;
+    }
+    .offerblock{
+        display:none;
+    }
+    .offerblockMobile
+{
+    background-color: whitesmoke;
+    height: 100px;
+    border-bottom: 1px solid #ccc;
+}
+.offerblockMobile article
+{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    height: 110px;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+}
+.offerblockMobile article div
+{
+    flex: 1;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+.offerblockMobile article div a img
+{
+    width: 60px;
+}
+.offerblockMobile article div a
+{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #111;
+    line-height: 1;
+}
+.offerblockMobile article div a i
+{
+    font-size: 10px;
+}
+.offerblockMobile article div a span:hover
+{
+    color: #2874f0;
+}
+.fashionblock
+{
+    position: absolute;
+    top: 155px;
+    left: 440px;
+    list-style-type: none;
+    background-color: white;
+    width: 200px;
+    /* display: none; */
+}
+.fashionblock li
+{
+    margin: 0% !important; 
+    padding: 12px 18px;
+    
+}
+.fashionblock li:hover
+{
+    display: block;
+}
+.arrowup3
+{
+    border-bottom: 12px solid white;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 144px;
+    margin: auto;
+    right: 63em;
+    display: none;
+}
   }
